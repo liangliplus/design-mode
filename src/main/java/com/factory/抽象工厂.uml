@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>com.factory.FactoryTest</OriginalElement>
+  <nodes>
+    <node x="173.0" y="127.0">com.factory.Guitar</node>
+    <node x="149.75" y="254.0">com.factory.abstractFactory.PerfectGuitarFactory</node>
+    <node x="154.5" y="0.0">com.factory.IMusicalInstruments</node>
+    <node x="493.5" y="104.0">com.factory.abstractFactory.ImusicalInstrumentsFactory</node>
+    <node x="338.5" y="127.0">com.factory.abstractFactory.GuitarScore</node>
+    <node x="0.0" y="127.0">com.factory.abstractFactory.GuitarBackPack</node>
+    <node x="338.5" y="0.0">com.factory.abstractFactory.Score</node>
+    <node x="1.5" y="0.0">com.factory.abstractFactory.Ibackpack</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="com.factory.abstractFactory.PerfectGuitarFactory" target="com.factory.abstractFactory.GuitarScore">
+      <point x="42.875" y="-50.0" />
+      <point x="364.125" y="229.0" />
+      <point x="406.0" y="229.0" />
+      <point x="0.0" y="27.0" />
+    </edge>
+    <edge source="com.factory.abstractFactory.PerfectGuitarFactory" target="com.factory.abstractFactory.GuitarBackPack">
+      <point x="-128.625" y="-50.0" />
+      <point x="192.625" y="229.0" />
+      <point x="68.0" y="229.0" />
+      <point x="0.0" y="27.0" />
+    </edge>
+    <edge source="com.factory.Guitar" target="com.factory.IMusicalInstruments">
+      <point x="0.0" y="-27.0" />
+      <point x="0.0" y="27.0" />
+    </edge>
+    <edge source="com.factory.abstractFactory.GuitarScore" target="com.factory.abstractFactory.Score">
+      <point x="0.0" y="-27.0" />
+      <point x="0.0" y="27.0" />
+    </edge>
+    <edge source="com.factory.abstractFactory.GuitarBackPack" target="com.factory.abstractFactory.Ibackpack">
+      <point x="0.0" y="-27.0" />
+      <point x="0.0" y="27.0" />
+    </edge>
+    <edge source="com.factory.abstractFactory.PerfectGuitarFactory" target="com.factory.abstractFactory.ImusicalInstrumentsFactory">
+      <point x="128.625" y="-50.0" />
+      <point x="449.875" y="229.0" />
+      <point x="665.0" y="229.0" />
+      <point x="0.0" y="50.0" />
+    </edge>
+    <edge source="com.factory.abstractFactory.PerfectGuitarFactory" target="com.factory.Guitar">
+      <point x="-42.875" y="-50.0" />
+      <point x="278.375" y="229.0" />
+      <point x="236.5" y="229.0" />
+      <point x="0.0" y="27.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="418.5" y="177.0" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Methods</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

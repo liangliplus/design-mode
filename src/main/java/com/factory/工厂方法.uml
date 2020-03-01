@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>com.factory.methodFactory.IMusicalInstrumentsFactory</OriginalElement>
+  <nodes>
+    <node x="0.0" y="81.0">com.factory.Guitar</node>
+    <node x="123.75" y="0.0">com.factory.IMusicalInstruments</node>
+    <node x="252.125" y="162.0">com.factory.methodFactory.ViolinFactory</node>
+    <node x="330.0" y="81.0">com.factory.Violin</node>
+    <node x="35.125" y="162.0">com.factory.methodFactory.GuitarFactory</node>
+    <node x="103.0" y="81.0">com.factory.methodFactory.IMusicalInstrumentsFactory</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="com.factory.Guitar" target="com.factory.IMusicalInstruments">
+      <point x="0.0" y="-15.5" />
+      <point x="41.5" y="56.0" />
+      <point x="164.75" y="56.0" />
+      <point x="-41.0" y="15.5" />
+    </edge>
+    <edge source="com.factory.methodFactory.GuitarFactory" target="com.factory.Guitar">
+      <point x="-31.5" y="-15.5" />
+      <point x="66.625" y="137.0" />
+      <point x="41.5" y="137.0" />
+      <point x="0.0" y="15.5" />
+    </edge>
+    <edge source="com.factory.methodFactory.ViolinFactory" target="com.factory.Violin">
+      <point x="31.0" y="-15.5" />
+      <point x="345.125" y="137.0" />
+      <point x="370.0" y="137.0" />
+      <point x="0.0" y="15.5" />
+    </edge>
+    <edge source="com.factory.methodFactory.ViolinFactory" target="com.factory.methodFactory.IMusicalInstrumentsFactory">
+      <point x="-31.0" y="-15.5" />
+      <point x="283.125" y="137.0" />
+      <point x="258.25" y="137.0" />
+      <point x="51.75" y="15.5" />
+    </edge>
+    <edge source="com.factory.methodFactory.GuitarFactory" target="com.factory.methodFactory.IMusicalInstrumentsFactory">
+      <point x="31.5" y="-15.5" />
+      <point x="129.625" y="137.0" />
+      <point x="154.75" y="137.0" />
+      <point x="-51.75" y="15.5" />
+    </edge>
+    <edge source="com.factory.Violin" target="com.factory.IMusicalInstruments">
+      <point x="0.0" y="-15.5" />
+      <point x="370.0" y="56.0" />
+      <point x="246.75" y="56.0" />
+      <point x="41.0" y="15.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="205.0" y="96.5" />
+  <SelectedNodes>
+    <node>com.factory.Guitar</node>
+    <node>com.factory.IMusicalInstruments</node>
+    <node>com.factory.methodFactory.ViolinFactory</node>
+    <node>com.factory.Violin</node>
+    <node>com.factory.methodFactory.GuitarFactory</node>
+    <node>com.factory.methodFactory.IMusicalInstrumentsFactory</node>
+  </SelectedNodes>
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

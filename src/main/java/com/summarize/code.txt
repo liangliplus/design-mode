@@ -1,0 +1,55 @@
+
+AOP体系结构
+
+ProxyConfig：
+
+    作为共同基类，可以看成是一个数据基类，这个数据基类为ProxyFactoryBean这样的子类提供了配置属性。
+
+AdvisedSupport：
+
+    封装了AOP对通知和通知器的相关操作，这些操作对于不同的AOP的代理对象的生成都是一样的，但对于
+
+具体的AOP代理对象的创建，AdvisedSupport把它交给它的子类们去完成。
+
+ProxyCreatorSupport：
+
+    是其子类创建AOP代理对象的一个辅助类。
+
+AspectJProxyFactory：
+
+    集成Spring和AspectJ的作用，适用于需要使用AspectJ的AOP应用。
+
+ProxyFactoryBean：
+
+    Spring的AOP应用，可以在IOC中声明式配置。
+
+ProxyFactory：
+
+    Spring的AOP应用，需要编程式使用。
+
+
+
+IOC
+
+在做web开发的时候 配置的  listener就是IOC入口
+	<listener>
+        <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+    </listener>
+
+入口：ContextLoaderListener.contextInitialized(ServletContextEvent)
+
+1。首先，创建一个上下文 WebApplicationContext context。使用默认的策略： XmlWebApplicationContext 的实例作为上下文。
+2. 将 XmlWebApplicationContext 强转成 ConfigurableWebApplicationContext ，设置 parent (是null)
+2. 调用 ContextLoader.configureAndRefreshWebApplicationContext 刷新上下文
+
+ContextLoader.configureAndRefreshWebApplicationContext 刷新上下文：
+1. 将ServletContext设置到 WebApplicationContext
+获取web.xml中配置的contextConfigLocation，设置到 WebApplicationContext 中
+2. wac.refresh() 刷新上下文
+
+
+DI 读取xml配置数据，把xml数据转换为我们的对象信息
+
+
+
+

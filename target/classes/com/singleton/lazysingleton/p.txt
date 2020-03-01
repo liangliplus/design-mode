@@ -1,0 +1,112 @@
+Classfile /D:/workspace/design-mode/target/classes/com/singleton/lazysingleton/LazySingleton.class
+  Last modified 2019-3-10; size 780 bytes
+  MD5 checksum 3e021ee78fa835a6687d78d04e1784a5
+  Compiled from "LazySingleton.java"
+public class com.singleton.lazysingleton.LazySingleton implements java.io.Serializable
+  minor version: 0
+  major version: 52
+  flags: ACC_PUBLIC, ACC_SUPER
+Constant pool:
+   #1 = Methodref          #5.#25         // java/lang/Object."<init>":()V
+   #2 = Fieldref           #3.#26         // com/singleton/lazysingleton/LazySingleton.lazySingleton:Lcom/singleton/lazysingleton/LazySingleton;
+   #3 = Class              #27            // com/singleton/lazysingleton/LazySingleton
+   #4 = Methodref          #3.#25         // com/singleton/lazysingleton/LazySingleton."<init>":()V
+   #5 = Class              #28            // java/lang/Object
+   #6 = Class              #29            // java/io/Serializable
+   #7 = Utf8               lazySingleton
+   #8 = Utf8               Lcom/singleton/lazysingleton/LazySingleton;
+   #9 = Utf8               <init>
+  #10 = Utf8               ()V
+  #11 = Utf8               Code
+  #12 = Utf8               LineNumberTable
+  #13 = Utf8               LocalVariableTable
+  #14 = Utf8               this
+  #15 = Utf8               getInstance
+  #16 = Utf8               ()Lcom/singleton/lazysingleton/LazySingleton;
+  #17 = Utf8               StackMapTable
+  #18 = Class              #28            // java/lang/Object
+  #19 = Class              #30            // java/lang/Throwable
+  #20 = Utf8               readResolve
+  #21 = Utf8               ()Ljava/lang/Object;
+  #22 = Utf8               <clinit>
+  #23 = Utf8               SourceFile
+  #24 = Utf8               LazySingleton.java
+  #25 = NameAndType        #9:#10         // "<init>":()V
+  #26 = NameAndType        #7:#8          // lazySingleton:Lcom/singleton/lazysingleton/LazySingleton;
+  #27 = Utf8               com/singleton/lazysingleton/LazySingleton
+  #28 = Utf8               java/lang/Object
+  #29 = Utf8               java/io/Serializable
+  #30 = Utf8               java/lang/Throwable
+{
+  public static com.singleton.lazysingleton.LazySingleton getInstance();
+    descriptor: ()Lcom/singleton/lazysingleton/LazySingleton;
+    flags: ACC_PUBLIC, ACC_STATIC
+    Code:
+      stack=2, locals=2, args_size=0
+         0: getstatic     #2                  // Field lazySingleton:Lcom/singleton/lazysingleton/LazySingleton;
+         3: ifnonnull     37
+         6: ldc           #3                  // class com/singleton/lazysingleton/LazySingleton
+         8: dup
+         9: astore_0
+        10: monitorenter
+        11: getstatic     #2                  // Field lazySingleton:Lcom/singleton/lazysingleton/LazySingleton;
+        14: ifnonnull     27
+        17: new           #3                  // class com/singleton/lazysingleton/LazySingleton
+        20: dup
+        21: invokespecial #4                  // Method "<init>":()V
+        24: putstatic     #2                  // Field lazySingleton:Lcom/singleton/lazysingleton/LazySingleton;
+        27: aload_0
+        28: monitorexit
+        29: goto          37
+        32: astore_1
+        33: aload_0
+        34: monitorexit
+        35: aload_1
+        36: athrow
+        37: getstatic     #2                  // Field lazySingleton:Lcom/singleton/lazysingleton/LazySingleton;
+        40: areturn
+      Exception table:
+         from    to  target type
+            11    29    32   any
+            32    35    32   any
+      LineNumberTable:
+        line 14: 0
+        line 15: 6
+        line 16: 11
+        line 17: 17
+        line 18: 27
+        line 21: 37
+      StackMapTable: number_of_entries = 3
+        frame_type = 252 /* append */
+          offset_delta = 27
+          locals = [ class java/lang/Object ]
+        frame_type = 68 /* same_locals_1_stack_item */
+          stack = [ class java/lang/Throwable ]
+        frame_type = 250 /* chop */
+          offset_delta = 4
+
+  public java.lang.Object readResolve();
+    descriptor: ()Ljava/lang/Object;
+    flags: ACC_PUBLIC
+    Code:
+      stack=1, locals=1, args_size=1
+         0: getstatic     #2                  // Field lazySingleton:Lcom/singleton/lazysingleton/LazySingleton;
+         3: areturn
+      LineNumberTable:
+        line 26: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       4     0  this   Lcom/singleton/lazysingleton/LazySingleton;
+
+  static {};
+    descriptor: ()V
+    flags: ACC_STATIC
+    Code:
+      stack=1, locals=0, args_size=0
+         0: aconst_null
+         1: putstatic     #2                  // Field lazySingleton:Lcom/singleton/lazysingleton/LazySingleton;
+         4: return
+      LineNumberTable:
+        line 11: 0
+}
+SourceFile: "LazySingleton.java"
